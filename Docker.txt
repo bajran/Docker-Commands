@@ -39,4 +39,51 @@ If I want to stop the mongo container then I need to get the container id, and r
 is shown below
 	>docker stop efc10b902596
 
+>docker exect -it <container_id>   -> docker exec -it efc10b902596 bash
+Here *exec* is to execute, *-it* interactive mode. i.e to interact with container image
+Result -> It will open the contaiener in bash mode for interaction in our case we are interacting with mongo
+
+we get such type of bash prompt
+root@efc10b902596:/#
+
+If we enter mongo in that, then will get below result
+
+root@efc10b902596:/# mongo
+
+----Start O/P----
+
+MongoDB shell version v4.2.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("26f27cea-8748-436d-89cb-4de8dae81e2c") }
+MongoDB server version: 4.2.3
+Server has startup warnings:
+2020-03-04T02:31:57.597+0000 I  STORAGE  [initandlisten]
+2020-03-04T02:31:57.597+0000 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-03-04T02:31:57.597+0000 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-03-04T02:31:59.904+0000 I  CONTROL  [initandlisten]
+2020-03-04T02:31:59.904+0000 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-03-04T02:31:59.904+0000 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-03-04T02:31:59.904+0000 I  CONTROL  [initandlisten]
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+----End O/P----
+
+If we want to check dbs in mongodb then, in bash we need to add show dbs 
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+** If we want to exit from bash / Interactive terminal of container **
+ctrl + d
+
 
