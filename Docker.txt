@@ -40,7 +40,9 @@ is shown below
 	>docker stop efc10b902596
 -----------------------------------------------------------
 >docker exect -it <container_id>   -> docker exec -it efc10b902596 bash
-Here *exec* is to execute, *-it* interactive mode. i.e to interact with container image
+Here *exec* is to execute, *-it* interactive mode. i.e to interact with container image.
+[-i] -  it is for input and output command,
+[-t] -  for terminal, like tty
 Result -> It will open the contaiener in bash mode for interaction in our case we are interacting with mongo
 
 we get such type of bash prompt
@@ -100,4 +102,83 @@ It will kill/stop the container without waiting for completion of ongoing proces
 
 -----------------------------------------------------------------------------
 
+Multiple ways to get into container
+
+1] docker exec -it  efc10b902596 bash - In this  case we need to start the container first (if it is not yet running) and then need to execute this command to enter in that container
+
+2] docker run -it mongo bash  - You don't need to start container here, This command will start your container as well as it will enter in container as well
+
+
+--------------------------------------------------------------------------------
+
+=== Create Your Own Image === 
+
+we can going to create mymongo image
+
+first create folder > mkdir mymongo
+Go to that folder > mymongo -> and then create Dockerfile
+
+Here understand that how to create container image
+
+Dockerfile -- It is processed by  --> Docker client --It will give futher to Docker Server and process the commands written in Docker file --After all the processing image is going to generate--> Custom Image
  
+what to write inside the Dockerfile, hmmmm ??
+so, lets start, prior to that understand first how to write comment in Dockerfile
+using [ # ] symbol you can write the command.
+e.g --> # step 1
+
+Let's Start with create of Dockerfile
+<!-- Docker File Start -->
+
+# step 1
+# First step is used os to interact with hardware, here we are using alpine
+# alpine - It is minimal docker image which is based on Alpine Linux 
+FROM alpine
+
+
+# step 2
+# Install a software
+# apk - It is like [ apt get ]
+# binutils - is nothing but program
+# It is like we are going to the alpine environment and adding binutils program
+RUN apk add binutils
+
+<!-- Docker File End -->
+
+Now create docker image
+
+Go to mymongo folder $mymongo >
+do the ls command to check Dockerfile is present or not $mymongo > ls
+
+then run docker build command, and see the result 
+
+$mymongo > docker build .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM alpine
+latest: Pulling from library/alpine
+c9b1b535fdd9: Pulling fs layer
+c9b1b535fdd9: Verifying Checksum
+c9b1b535fdd9: Download complete
+c9b1b535fdd9: Pull complete
+Digest: sha256:ab00606a42621fb68f2ed6ad3c88be54397f981a7b70a79db3d1172b11c4367d
+Status: Downloaded newer image for alpine:latest
+ ---> e7d92cdc71fe
+Step 2/2 : RUN apk add binutils
+ ---> Running in 73907c905946
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+(1/3) Installing libgcc (9.2.0-r3)
+(2/3) Installing libstdc++ (9.2.0-r3)
+(3/3) Installing binutils (2.33.1-r0)
+Executing busybox-1.31.1-r9.trigger
+OK: 17 MiB in 17 packages
+Removing intermediate container 73907c905946
+ ---> e3aec4897168
+Successfully built e3aec4897168
+
+--------------------------------------------------------------------------
+
+
+
+
+
