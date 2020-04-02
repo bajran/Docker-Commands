@@ -36,11 +36,11 @@ Before executing commands, make sure that you have login on Docker Hub.
 > You can the different instances of busybox, by providing their version, If you didn't provide any 
 > then by default it will take latest version
 
-**Default latest version, In both cases it will take latest version
+*for Default latest version, In both cases it will take latest version*
 ```
 > docker run busybox:latest or >docker run busybox
 ```
-**If you need to specify any particular version, then??
+*If you need to specify any particular version, **then??** *
 ```
 > docker run busybox:12.0
 ```
