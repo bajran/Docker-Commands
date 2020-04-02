@@ -18,9 +18,8 @@ Before executing commands, make sure that you have login on Docker Hub.
 
 ``` 
 > docker version 
-
-To get the version of docker, which is installed in our system
 ```
+To get the version of docker, which is installed in our system
 --------------------------------------------------------
 ```
 > docker pull busybox
