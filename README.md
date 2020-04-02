@@ -49,14 +49,14 @@ Before executing commands, make sure that you have login on Docker Hub.
 ---------------------------------------------------------
 ```
 > docker ps
-To see running the container
 ```
+> To see running the container
 ----------------------------------------------------------
 ```
 > docker ps --all or docker ps -a
-To see all the container
 ```
-----------------------------------------------------------
+> To see all the container
+*E.g *
 ```
 > docker ps --all
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
