@@ -14,12 +14,12 @@ Before executing commands, make sure that you have login on Docker Hub.
 ##### **If you have operating system with version -> Windows 10 Pro, then you can directly install docker desktop 
 ##### **If you don't have Windows 10 Pro, then you must install docker-toolbox to run docker on your machine
 
-##### Commands
+#### Commands
 
 ``` 
 > docker version 
 ```
-# To get the version of docker, which is installed in our system
+##### To get the version of docker, which is installed in our system
 --------------------------------------------------------
 ```
 > docker pull busybox
