@@ -22,28 +22,30 @@ Before executing commands, make sure that you have login on Docker Hub.
 > To get the version of docker, which is installed in our system
 --------------------------------------------------------
 ```
-> docker pull <container_image> - e.g -> docker pull busybox
+> docker pull <container_image>   e.g -> docker pull busybox
 ```
 > It will pull *busybox* image from docker-hub
 --------------------------------------------------------
 ```
-> docker run <container_image> - e.g -> docker run busybox
+> docker run <container_image>   e.g -> docker run busybox
 ```
 > It will check whether it have busybox image in their local image repository, if it does not have this
 > the it will go to docker-hub and pull that image to our local image repository and then run that, it 
 > happens only once if the image is not their in our local image repository
 
-You can the different instances of busybox, by providing their version, If you didn't provide any 
-then by default it will take latest version
+> You can the different instances of busybox, by providing their version, If you didn't provide any 
+> then by default it will take latest version
 
 **Default latest version, In both cases it will take latest version
-> docker run busybox:latest or >docker run busybox
-
-**If you need to specify any particular version, then??
-> docker run busybox:12.0
-
-It will pull the busybox 12.0 version
 ```
+> docker run busybox:latest or >docker run busybox
+```
+**If you need to specify any particular version, then??
+```
+> docker run busybox:12.0
+```
+> It will pull the busybox 12.0 version
+
 ---------------------------------------------------------
 ```
 > docker ps
