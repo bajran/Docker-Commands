@@ -297,7 +297,7 @@ Successfully built e3aec4897168
 ```
 > docker history <container-id>
 ```
-> TO get the history of docker image
+> To get the history of docker image
 e.g
 ```
 > docker history redis                                                                                                  IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
