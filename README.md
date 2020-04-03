@@ -240,11 +240,14 @@ Each line in dockerfile contains layer,
 
 Now create docker image
 
-Go to mymongo folder ```$mymongo >```
-do the ls command to check Dockerfile is present or not ```$mymongo > ls```
+> Go to mymongo folder ```$mymongo >```
+> do the ls command to check Dockerfile is present or not ```$mymongo > ls```
 
-then run docker build command, and see the result 
-```$mymongo > docker build .```
+> then run docker build command, and see the result 
+```
+$mymongo > docker build .
+```
+```
 Sending build context to Docker daemon  2.048kB
 Step 1/2 : FROM alpine
 latest: Pulling from library/alpine
@@ -267,6 +270,7 @@ OK: 17 MiB in 17 packages
 Removing intermediate container 73907c905946
  ---> e3aec4897168
 Successfully built e3aec4897168
+```
 ---------------------------------------
 
 > If any of layer is failed, then we need to fixed it and it doesn't start with first layer, acutally it 
