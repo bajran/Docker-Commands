@@ -56,46 +56,45 @@ Before executing commands, make sure that you have login on Docker Hub.
 > docker ps --all or docker ps -a
 ```
 > To see all the container
-*E.g *
+*E.g*
 ```
 > docker ps --all
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
 efc10b902596        mongo               "docker-entrypoint.s…"   9 minutes ago       Up 9 minutes                27017/tcp           tender_grothendieck
 ```
 ----------------------------------------------------------
-
-##### Start Contianer
-If I want to run the mongo container then I need to get the container id, and run the start command which 
-is shown below
 ```
 > docker start efc10b902596
 ```
-##### Stop Container
-If I want to stop the mongo container then I need to get the container id, and run the stop command which 
-is shown below
+> Start Container
+> If I want to run the mongo container then I need to get the container id, and run the start command
+
 ```
 > docker stop efc10b902596
 ```
-##### Remove Container
-If I want to completely remove the container , then run the remove command which is shown below
+> Stop Container
+> If I want to stop the mongo container then I need to get the container id, and run the stop command
+
 ```
-	>docker rm efc10b902596.
+> docker rm efc10b902596.
 ```
-to verify whether the image has removed or not, then we need to run 
+> Remove Container
+> If I want to completely remove the container , then run the remove command 
+
 ```
  > docker ps -all 
 ```
-and check in result whether image has gone or not.
+> To verify whether the image has removed or not, then we need to run above command and check in result whether image has gone or not.
 
 Note: This image has been their in your host.
 ---------------------------------------------------------------
 
-To check images on our host machine, then run
+> To check images on our host machine, then run
 ```
 > docker images
 ```
 
-It will gives us below availabel images on host
+> It will gives us below result for availabel images on host
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 <none>              <none>              e3aec4897168        5 days ago          18.4MB
@@ -104,7 +103,7 @@ alpine              latest              e7d92cdc71fe        7 weeks ago         
 busybox             latest              6d5fcfe5ff17        2 months ago        1.22MB
 hello-world         latest              fce289e99eb9        14 months ago       1.84kB
 
-And to remove the image, from your host you need to run
+> And to remove the image, from your host you need to run
 ```
 > docker rmi <REPOSITORY_Name>
 ```
