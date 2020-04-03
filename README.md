@@ -170,13 +170,13 @@ local   0.000GB
 ```
 > docker stop <container_id>
 ```
-It will execute the ongoing process and then stop the container or we can say that after completion
-of current executing work it can stop the container
+> It will execute the ongoing process and then stop the container or we can say that after completion
+> of current executing work it can stop the container
 
 ```
 > docker kill <container_id>
 ```
-It will kill/stop the container without waiting for completion of ongoing process.
+> It will kill/stop the container without waiting for completion of ongoing process.
 
 -----------------------------------------------------------------------------
 
@@ -184,37 +184,36 @@ It will kill/stop the container without waiting for completion of ongoing proces
 ```
 docker exec -it  efc10b902596 bash - 
 ```
-In this  case we need to start the container first (if it is not yet running) and then need to execute this command to enter in that container
+> In this  case we need to start the container first (if it is not yet running) and then need to execute this command to enter in that > > container
 ```
 docker run -it mongo bash  
 ```
-You don't need to start container here, This command will start your container as well as it will enter in container as well
-
+> You don't need to start container here, This command will start your container as well as it will enter in container as well
 
 --------------------------------------------------------------------------------
 
 === Create Your Own Image === 
 
-we can going to create mymongo image
+> we can going to create mymongo image
 
-first create folder > mkdir mymongo
-Go to that folder > mymongo -> and then create Dockerfile
+> first create folder > mkdir mymongo
+> Go to that folder > mymongo -> and then create Dockerfile
 
-Here understand that how to create container image
+> Here understand that how to create container image
 
-Dockerfile -- It is processed by  --> Docker client --It will give futher to Docker Server and process the commands written in Docker file --After all the processing image is going to generate--> Custom Image
+> Dockerfile -- It is processed by  --> Docker client --It will give futher to Docker Server and process the commands written in Docker > file --After all the processing image is going to generate--> Custom Image
  
-what to write inside the Dockerfile, hmmmm ??
-so, lets start, prior to that understand first how to write comment in Dockerfile
-using [ # ] symbol you can write the command.
-e.g --> # step 1
+> what to write inside the Dockerfile, hmmmm ??
+> so, lets start, prior to that understand first how to write comment in Dockerfile
+> using [ # ] symbol you can write the command.
+> e.g --> # step 1
 
 
-Let's Start with create of Dockerfile
-Dockerfile is composition of:-
-[ INSTRUCTION ] [ ARGUMENT ] 
-Everything on left in dockerfile is instruction which tell docker client what to do
-Everything on right in dockerfile is argument which is instruction for that argument
+> Let's Start with create of Dockerfile
+> Dockerfile is composition of:-
+> [ INSTRUCTION ] [ ARGUMENT ] 
+> Everything on left in dockerfile is instruction which tell docker client what to do
+> Everything on right in dockerfile is argument which is instruction for that argument
 
 
 <!-- Docker File Start -->
