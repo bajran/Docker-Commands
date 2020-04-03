@@ -196,12 +196,12 @@ docker run -it mongo bash
 
 > we can going to create mymongo image
 
-> first create folder > mkdir mymongo
-> Go to that folder > mymongo -> and then create Dockerfile
+> first create folder *> mkdir mymongo*
+> Go to that folder *> mymongo -> and then create Dockerfile*
 
 > Here understand that how to create container image
 
-> Dockerfile -- It is processed by  --> Docker client --It will give futher to Docker Server and process the commands written in Docker > file --After all the processing image is going to generate--> Custom Image
+> *Dockerfile* -- It is processed by  --> *Docker client* --It will give futher to Docker Server and process the commands written in Docker > file --After all the processing image is going to generate--> *Custom Image*
  
 > what to write inside the Dockerfile, hmmmm ??
 > so, lets start, prior to that understand first how to write comment in Dockerfile
@@ -211,26 +211,26 @@ docker run -it mongo bash
 
 > Let's Start with create of Dockerfile
 > Dockerfile is composition of:-
-> [ INSTRUCTION ] [ ARGUMENT ] 
+> *[ INSTRUCTION ]* *[ ARGUMENT ]* 
 > Everything on left in dockerfile is instruction which tell docker client what to do
 > Everything on right in dockerfile is argument which is instruction for that argument
 
 
 <!-- Docker File Start -->
 
-# step 1
-# First step is used os to interact with hardware, here we are using alpine
-# alpine - It is minimal docker image which is based on Alpine Linux 
-# It is base image
+##### step 1
+###### First step is used os to interact with hardware, here we are using alpine
+###### alpine - It is minimal docker image which is based on Alpine Linux 
+###### It is base image
 ```
 FROM alpine
 ```
 
-# step 2
-# Install a software
-# apk - It is like [ apt get ]
-# binutils - is nothing but program
-# It is like we are going to the alpine environment and adding binutils program
+##### step 2
+###### Install a software
+###### apk - It is like [ apt get ]
+###### binutils - is nothing but program
+###### It is like we are going to the alpine environment and adding binutils program
 ```
 RUN apk add binutils
 ```
@@ -269,31 +269,31 @@ Removing intermediate container 73907c905946
 Successfully built e3aec4897168
 ---------------------------------------
 
-If any of layer is failed, then we need to fixed it and it doesn't start with first layer, acutally it 
-cache the layer and when we re-run it again, it takes from cache and starts from the failed part again
+> If any of layer is failed, then we need to fixed it and it doesn't start with first layer, acutally it 
+> cache the layer and when we re-run it again, it takes from cache and starts from the failed part again
 
 --------------------------------------------------------------------------
 ##### Inspect
 
-To get the details of docker container, then run below commands
 ```
 > docker inspect <container_id>
 ```
+> To get the details of docker container, then run below commands
 --------------------------------------------------------------------------
 ##### Logs
 
-TO get the logs of container
 ```
 > docker logs <container_id>
 ```
+> To get the logs of container
 -------------------------------------------------------------
 
 ##### History
 
-TO get the history of docker image
 ```
 > docker history <container-id>
 ```
+> TO get the history of docker image
 e.g
 ```
 > docker history redis                                                                                                  IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
