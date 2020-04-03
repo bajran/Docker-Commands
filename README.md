@@ -95,20 +95,20 @@ Note: This image has been their in your host.
 ```
 
 > It will gives us below result for availabel images on host
-
+```
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 <none>              <none>              e3aec4897168        5 days ago          18.4MB
 mongo               latest              bcef5fd2979d        2 weeks ago         386MB
 alpine              latest              e7d92cdc71fe        7 weeks ago         5.59MB
 busybox             latest              6d5fcfe5ff17        2 months ago        1.22MB
 hello-world         latest              fce289e99eb9        14 months ago       1.84kB
-
+```
 > And to remove the image, from your host you need to run
 ```
 > docker rmi <REPOSITORY_Name>
 ```
 Note: Before running that command make sure, that no images are running on it
-
+------------------------------------------------------------------------------
 
 ##### Interactive Mode
 ```
