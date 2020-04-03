@@ -85,8 +85,6 @@ efc10b902596        mongo               "docker-entrypoint.s…"   9 minutes ago
  > docker ps -all 
 ```
 > To verify whether the image has removed or not, then we need to run above command and check in result whether image has gone or not.
-
-Note: This image has been their in your host.
 ---------------------------------------------------------------
 
 > To check images on our host machine, then run
@@ -107,7 +105,7 @@ hello-world         latest              fce289e99eb9        14 months ago       
 ```
 > docker rmi <REPOSITORY_Name>
 ```
-Note: Before running that command make sure, that no images are running on it
+
 ------------------------------------------------------------------------------
 
 ##### Interactive Mode
