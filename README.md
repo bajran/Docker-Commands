@@ -78,13 +78,17 @@ efc10b902596        mongo               "docker-entrypoint.s…"   9 minutes ago
 ```
 > docker rm efc10b902596.
 ```
-> Remove Container
+> Remove Single Container
 > If I want to completely remove the container , then run the remove command 
 
 ```
- > docker ps -all 
+> docker rm [id] [id]
 ```
-> To verify whether the image has removed or not, then we need to run above command and check in result whether image has gone or not.
+> Remove Multiple Container
+```
+ > docker rm $(docker ps -aq) 
+```
+> Remove All Container
 ---------------------------------------------------------------
 
 > To check images on our host machine, then run
