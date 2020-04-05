@@ -324,3 +324,7 @@ e.g
 ```
 ------------------------------------------------------------------
 
+##### Difference between RUN and CMD Instruction in Dockerfile
+
+> RUN executes only once when you build your image
+> CMD executes everytime when you run your container
